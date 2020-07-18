@@ -1,0 +1,68 @@
+---
+title: "Bhavya"
+output:
+  html_document:
+    df_print: paged
+---
+```{r}
+library(ggplot2)
+```
+
+
+```{r}
+ggplot (data = diamonds) +
+  geom_bar(mapping = aes(x = cut))
+```
+##3
+
+```{r}
+ggplot (data=diamonds) +
+  geom_histogram(mapping = aes(x = carat), binwidth = 0.5)
+```
+##4
+```{r}
+ggplot(data = diamonds, mapping = aes(x = carat, colour = cut)) +
+  geom_freqpoly(binwidth = 0.1)
+
+```
+
+##5
+```{r}
+ggplot(data = diamonds, mapping = aes(x = carat, colour = clarity)) +
+  geom_freqpoly(binwidth = 0.1)
+
+```
+
+##6
+
+```{r}
+##carat vs price 
+
+ggplot(aes(x = carat, y = price), data = diamonds) + 
+  geom_point(alpha = 0.5, size = 1, position = 'jitter') 
+
+```
+
+
+```{r}
+## carat vs price and clarity
+ggplot(aes(x = carat, y = price,color=clarity), data = diamonds) + 
+  geom_point(alpha = 0.5, size = 1, position = 'jitter') 
+```
+
+```{r}
+## price vs clarity and cut
+
+ggplot(aes(x = carat, y = price, color = cut), data = diamonds) + 
+  geom_point(alpha = 0.5, size = 1, position = 'jitter') 
+
+```
+
+
+```{r}
+##Price vs. Carat and Color
+
+ggplot(aes(x = carat, y = price, color = color), data = diamonds) + 
+  geom_point(alpha = 0.5, size = 1, position = 'jitter')
+
+```
