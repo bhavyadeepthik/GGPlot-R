@@ -1,4 +1,4 @@
-# GGPlot-R
+# GGPlot-R-Diamonds
 GG-PLOT-R
 Authour-@Bhavya-Deepthi
 
